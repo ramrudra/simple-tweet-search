@@ -53,3 +53,35 @@ function fetchTweetsFailure(err) {
     payload: err,
   };
 }
+
+
+/////////////////
+// Save tweet //
+///////////////
+export function saveTweet(data) {
+  const favTweets = JSON.parse(localStorage.getItem('favTweets'));
+  const updatedFavs = favTweets.concat(data);
+
+  return (dispatch) => {
+    dispatch(saveTweetRequest());
+    localStorage.setItem('favTweets', JSON.stringify(updatedFavs));
+    dispatch(saveTweetSuccess(updatedFavs));
+  };
+}
+
+// Fetch Tweets Request
+function saveTweetRequest() {
+  return {
+    type: ActionTypes.SAVE_TWEET_REQUEST,
+    isLoading: true,
+  };
+}
+
+// Fetch Tweets Success
+function saveTweetSuccess(data) {
+  return {
+    type: ActionTypes.SAVE_TWEET_SUCCESS,
+    isLoading: false,
+    data
+  };
+}

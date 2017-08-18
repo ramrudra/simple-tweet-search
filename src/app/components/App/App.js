@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
@@ -10,13 +10,22 @@ import Container from './styles/Container'
 // Styles
 import './App.scss';
 
-const App = ({ children }) => {
-  return (
-    <Container>
-      <Header />
-      {children}
-    </Container>
-  );
+class App extends Component {
+
+  componentDidMount() {
+    if(!localStorage.getItem('favTweets')) {
+      localStorage.setItem('favTweets', JSON.stringify([]));
+    }
+  }
+
+  render() {
+    return (
+      <Container>
+        <Header />
+        {this.props.children}
+      </Container>
+    );
+  }
 };
 
 App.propTypes = { children: PropTypes.object };

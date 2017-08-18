@@ -6,6 +6,7 @@ const apiConsts = {
 const colorConsts = {
   white: '#fff',
   blue: '#1da1f2',
+  bgGray: '#ddd',
   gray: '#7F7F7F'
 };
 

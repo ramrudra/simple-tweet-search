@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // Actions
+import { saveTweet } from 'appActions';
 
 // App Components
 import TweetCard from 'appComponents/TweetCard/TweetCard';
@@ -23,6 +24,7 @@ class TweetsList extends Component {
           <TweetCard
             key={i}
             tweetData={data}
+            saveTweet={this.props.saveTweet}
           />
         )}
       </TweetListWrapper>
@@ -41,7 +43,7 @@ const mapStateToProps = state => ({
 
 // Dispatch Actions
 const mapDispatchToProps = {
-
+  saveTweet
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TweetsList);

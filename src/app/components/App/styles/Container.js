@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { colorConsts } from 'appUtils/appConsts';
 
 const Container = styled.div`
-  background: ${colorConsts.white};
+  background: ${colorConsts.bgGray};
   max-width: 1000px;
   margin: 0 auto;
   position: relative;

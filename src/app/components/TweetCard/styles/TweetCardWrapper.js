@@ -9,9 +9,10 @@ const TweetCardWrapper = styled.div`
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
 	border-radius: 2px;
 	padding: 15px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	max-width: 465px;
 	width: 100%;
+	position: relative;
 `;
 
 export default TweetCardWrapper;
