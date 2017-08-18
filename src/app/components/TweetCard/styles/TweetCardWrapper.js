@@ -10,9 +10,11 @@ const TweetCardWrapper = styled.div`
 	border-radius: 2px;
 	padding: 15px;
 	margin-bottom: 15px;
-	max-width: 465px;
-	width: 100%;
+	width: 49%;
 	position: relative;
-`;
+	@media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}`;
 
 export default TweetCardWrapper;

@@ -17,7 +17,7 @@ export function fetchTweets(hash) {
   return (dispatch) => {
     requestHeaders(ACCESS_TOKEN);
     dispatch(fetchTweetsRequest());
-    return axios.get(`${API_URL}?q=%23${hash}&result_type=recent`)
+    return axios.get(`${API_URL}?q=%23${hash}&result_type=recent&count=100`)
       .then(res => {
         dispatch(fetchTweetsSuccess(res.data.statuses));
       })
