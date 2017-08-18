@@ -27,6 +27,7 @@ var webpackConfig = {
       appActions: `${projectRoot}/src/app/actions`,
       appReducers: `${projectRoot}/src/app/reducers`,
       ActionTypes: `${projectRoot}/src/app/actionTypes`,
+      appUtils: `${projectRoot}/src/app/utils`,
     },
   },
   plugins: [

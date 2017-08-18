@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header/Header';
+
+// Components
+import Header from 'appComponents/Header/Header';
+
+// Styled Components
+import Container from './sub-components/Container'
+
+// Styles
+import './App.scss';
 
 function App({ children }) {
   return (
-    <div className="container">
+    <Container>
       <Header />
       {children}
-    </div>
+    </Container>
   );
 }
 
