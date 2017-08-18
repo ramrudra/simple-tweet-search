@@ -4,13 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import App from './components/App';
-import Home from './components/home/Home';
-import About from './components/about/About';
+import App from './components/App/App';
+import Home from './components/Home/Home';
 
 import reducers from './reducers';
-
-import './components/bundle.scss';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -20,7 +17,6 @@ ReactDOM.render(
     <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />;
-        <Route path="/about" component={About} />
       </Route>
     </Router>
   </Provider>
