@@ -6,10 +6,9 @@ import { colorConsts } from 'appUtils/appConsts';
 const NavSection = styled.ul`
   list-style: none;
   display: flex;
-  max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
   padding: 0;
+  margin: 0;
  
  li {
    flex: 1;
