@@ -7,7 +7,7 @@ import TweetUserData from './styles/TweetUserData'
 import TweetSaveButton from './styles/TweetSaveButton';
 
 const TweetCard = (props) => {
-  const { tweetData: { id, text, created_at, user }, saveTweet } = props;
+  const { tweetData: { id, text, created_at, user }, saveTweet, path } = props;
 
   // Save Tweet Data
   const data = {
@@ -30,9 +30,11 @@ const TweetCard = (props) => {
        </div>
      </TweetUserData>
       {text}
-      <TweetSaveButton onClick={() => saveTweet(data)}>
-        <i className="fa fa-bookmark-o" /> Save
-      </TweetSaveButton>
+      {path !== 'favourites' &&
+        <TweetSaveButton onClick={() => saveTweet(data)}>
+          <i className="fa fa-bookmark-o" /> Save
+        </TweetSaveButton>
+      }
     </TweetCardWrapper>
   )
 };

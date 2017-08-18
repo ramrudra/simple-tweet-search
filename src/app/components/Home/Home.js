@@ -4,11 +4,13 @@ import React from 'react';
 import TweetSearch from 'appContainers/TweetSearch/TweetSearch';
 import TweetsList from 'appContainers/TweetsList/TweetsList';
 
-const Home = () => {
+const Home = (props) => {
   return (
    <div>
-     <TweetSearch />
-     <TweetsList />
+     {props.route.path !== 'favourites' &&
+      <TweetSearch />
+     }
+     <TweetsList path={props.route.path} />
    </div>
   )
 };

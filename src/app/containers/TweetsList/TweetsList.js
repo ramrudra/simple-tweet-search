@@ -16,15 +16,20 @@ class TweetsList extends Component {
   render() {
 
     //props
-    const { list: tweetsList, fav: favTweets } = this.props.tweets;
+    const { path, tweets, saveTweet } = this.props;
+    const { list: tweetsList, fav: favTweets } = tweets;
+
+    // Switch Tweets data based on tthe route
+    const listData = path === 'favourites' ? favTweets : tweetsList;
 
     return (
       <TweetListWrapper>
-        {tweetsList.map( (data, i) =>
+        {listData.map( (data, i) =>
           <TweetCard
             key={i}
             tweetData={data}
-            saveTweet={this.props.saveTweet}
+            saveTweet={saveTweet}
+            path={path}
           />
         )}
       </TweetListWrapper>
