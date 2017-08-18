@@ -23,19 +23,23 @@ class TweetSearch extends Component {
   // Update Hash Tag
   updateHash = (e) => this.setState({ hash: e.target.value });
 
+  // Fetch Tweets Actions
+  fetchTweets = (e) => {
+    e.preventDefault();
+    this.props.fetchTweets(this.state.hash);
+  };
+
   render() {
-    // State Data
-    const { hash } = this.state;
 
     return (
-      <SearchWrapper>
+      <SearchWrapper onSubmit={this.fetchTweets}>
         <span>#</span>
         <SearchInput
           onChange={this.updateHash}
-          placeholder="Search # here..."
+          placeholder="Search for a twitter # here..."
         />
         <SearchButton
-          onClick={() => this.props.fetchTweets(hash)}
+          type="submit"
         >
           <i className="fa fa-search" />
         </SearchButton>

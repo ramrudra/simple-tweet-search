@@ -13,7 +13,7 @@ const SearchSubmit = styled.button`
 	color: ${colorConsts.white};
 	background: ${colorConsts.blue};
 	position: absolute;
-  right: 5px;
+  right: 0;
   
   &:focus {
     outline: none;

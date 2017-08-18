@@ -20,10 +20,14 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
-        <Header />
-        {this.props.children}
-      </Container>
+      <div>
+        <Header
+          path={this.props.location.pathname}
+        />
+        <Container>
+          {this.props.children}
+        </Container>
+      </div>
     );
   }
 };

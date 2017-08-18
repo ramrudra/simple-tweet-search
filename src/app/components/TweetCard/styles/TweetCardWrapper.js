@@ -15,6 +15,11 @@ const TweetCardWrapper = styled.div`
 	@media screen and (max-width: 768px) {
     width: 100%;
   }
+  
+  .tweet-tweet {
+    font-size: 14px;
+    line-height: 1.25;
+  }
 }`;
 
 export default TweetCardWrapper;

@@ -29,7 +29,7 @@ const TweetCard = (props) => {
          <span className="created-time">{moment(created_at).fromNow()}</span>
        </div>
      </TweetUserData>
-      {text}
+      <div className="tweet-tweet">{text}</div>
       {path !== 'favourites' &&
         <TweetSaveButton onClick={() => saveTweet(data)}>
           <i className="fa fa-bookmark-o" /> Save

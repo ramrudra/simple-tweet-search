@@ -1,18 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router';
+import classNames from 'classnames';
 
-const Header = () => {
+// Styled Components
+import NavSection from './styles/NavSection';
+import HeaderWrapper from './styles/HeaderWrapper';
+
+const Header = (props) => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-            <Link to="/favourites">Favourites</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <HeaderWrapper>
+      <NavSection>
+        <li className={classNames({active: props.path === '/'})}>
+          <Link to="/">Search #</Link>
+        </li>
+        <li className={classNames({active: props.path === '/favourites'})}>
+          <Link to="/favourites">Favourite Tweets</Link>
+        </li>
+      </NavSection>
+    </HeaderWrapper>
   )
 };
 
