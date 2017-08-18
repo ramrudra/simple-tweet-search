@@ -29,7 +29,8 @@ class TweetSearch extends Component {
 
     return (
       <SearchWrapper>
-        # <SearchInput
+        <span>#</span>
+        <SearchInput
           onChange={this.updateHash}
           placeholder="Search # here..."
         />
