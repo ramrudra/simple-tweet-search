@@ -5,19 +5,19 @@ import PropTypes from 'prop-types';
 import Header from 'appComponents/Header/Header';
 
 // Styled Components
-import Container from './sub-components/Container'
+import Container from './styles/Container'
 
 // Styles
 import './App.scss';
 
-function App({ children }) {
+const App = ({ children }) => {
   return (
     <Container>
       <Header />
       {children}
     </Container>
   );
-}
+};
 
 App.propTypes = { children: PropTypes.object };
 

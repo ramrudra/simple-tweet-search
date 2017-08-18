@@ -7,9 +7,8 @@ import ActionTypes from 'ActionTypes';
 import requestHeaders from 'appUtils/requestHeaders';
 
 // App Consts
-import appConsts from 'appUtils/appConsts';
-
-const { API_URL, ACCESS_TOKEN } = appConsts;
+import { apiConsts } from 'appUtils/appConsts';
+const { API_URL, ACCESS_TOKEN } = apiConsts;
 
 // //////////////////////
 // Fetch Tweets By #//

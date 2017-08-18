@@ -7,6 +7,7 @@ const tweetsInitialState = {
   fav: []
 };
 
+// Tweets Reducer
 export default function tweets(state = tweetsInitialState, action) {
   switch (action.type) {
 

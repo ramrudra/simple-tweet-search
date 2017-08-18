@@ -2,11 +2,15 @@ import React from 'react';
 
 // Containers
 import TweetSearch from 'appContainers/TweetSearch/TweetSearch';
+import TweetsList from 'appContainers/TweetsList/TweetsList';
 
-function Home() {
+const Home = () => {
   return (
-    <TweetSearch />
+   <div>
+     <TweetSearch />
+     <TweetsList />
+   </div>
   )
-}
+};
 
 export default Home;

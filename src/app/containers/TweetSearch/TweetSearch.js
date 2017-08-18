@@ -6,8 +6,9 @@ import { connect } from 'react-redux';
 import { fetchTweets } from 'appActions';
 
 // Styled Components
-import SearchBar from './sub-components/SearchBar';
-import SearchButton from './sub-components/SearchSubmit';
+import SearchWrapper from './styles/SearchWrapper';
+import SearchInput from './styles/SearchInput';
+import SearchButton from './styles/SearchSubmit';
 
 class TweetSearch extends Component {
 
@@ -27,16 +28,17 @@ class TweetSearch extends Component {
     const { hash } = this.state;
 
     return (
-      <div>
-        <SearchBar
+      <SearchWrapper>
+        # <SearchInput
           onChange={this.updateHash}
+          placeholder="Search # here..."
         />
         <SearchButton
           onClick={() => this.props.fetchTweets(hash)}
         >
-          Search
+          <i className="fa fa-search" />
         </SearchButton>
-      </div>
+      </SearchWrapper>
     )
   }
 }
