@@ -20,6 +20,14 @@ const TweetCardWrapper = styled.div`
     font-size: 14px;
     line-height: 1.25;
   }
+  
+  .no-fav {
+    cursor: pointer;
+  }
+  
+  .fav {
+    color: ${colorConsts.green}
+  }
 }`;
 
 export default TweetCardWrapper;
